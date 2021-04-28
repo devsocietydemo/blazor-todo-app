@@ -1,14 +1,18 @@
 ﻿@page "/todo"
 
-<h3>Todo</h3>
+<h3>Todo (@todos.Count(todo => !todo.IsDone)) </h3>
 <ul>
     @foreach (var item in todos)
     {
-        <li>@item.Title</li>
+        <li>
+            <input type="checkbox" @bind="item.IsDone" />
+            @item.Title
+        </li>
+
     }
 </ul>
-<input placeholder="What you're about to do" />
-<button @onclick="AddTodo" @bind="newTodo">Add todo</button>
+<input @bind="newTodo" placeholder="What you're about to do" />
+<button class="btn" @onclick="AddTodo" >Add todo</button>
 
 @code {
     private List<TodoItem> todos = new List<TodoItem>() 
