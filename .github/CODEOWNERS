@@ -1,6 +1,6 @@
-*                 @kstachowicz 
-*.js              @bmis
-# /build/logs/      @devs
+*                   @kstachowicz 
+# *.js              @bmis
+# /build/logs/      @devsocietydemo/devs
 # docs/*            @docs@example.com
 # apps/             @octocat
 # /docs/            @doctocat
